@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memories - Indie Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 🌿 Sidebar رمزي -->
+  <nav class="sidebar">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#sneak">Sneak Peek</a></li>
+      <li><a href="#links">Play & Follow</a></li>
+    </ul>
+  </nav>
+
+  <!-- 🎀 رأس الصفحة -->
+  <header>
+    <h1>Memories</h1>
+    <p class="tagline">A cozy emotional story game about friendship, healing, and growth.</p>
+  </header>
+
+  <!-- 🌸 محتوى الموقع -->
+  <main>
+
+    <!-- 🪷 حول اللعبة -->
+    <article class="about" id="about">
+      <h2>About the Game</h2>
+      <p>
+        You play as Farah, a girl who just moved to a new city and is trying to rebuild her life, one connection at a time.
+        <br />
+        With no combat and a unique system of emotion, fatigue, and hunger — this game is all about relationships and choices.
+      </p>
+      <blockquote>
+        "She doesn't fight monsters. She grows through shadows."
+      </blockquote>
+    </article>
+
+    <!-- 🎞️ لمحة مرئية -->
+    <section class="media" id="sneak">
+      <h2>🌸 Sneak Peek 💛</h2>
+
+      <section class="slider">
+        <h2>Scenes from Memories</h2>
+        <div class="slider-container">
+          <div class="slide">
+            <img src="Farah walking in the market.png" alt="Farah walking in the market" />
+            <p class="caption">Walking in the Market</p>
+          </div>
+          <div class="slide">
+            <img src="Emotional dialogue in the park.png" alt="Emotional dialogue in the park" />
+            <p class="caption">Dialogue in the Park</p>
+          </div>
+          <div class="slide">
+            <img src="Farah watching sunset.gif" alt="Farah watching sunset" />
+            <p class="caption">Watching the Sunset</p>
+          </div>
+        </div>
+      </section>
+
+      <img src="screenshot.png" alt="Farah exploring her new town" />
+    </section>
+
+    <!-- 🎮 روابط التشغيل -->
+    <section class="links" id="links">
+      <a href="https://Ray_the_bee.itch.io" class="btn">Play Demo</a>
+      <a href="https://www.tiktok.com/@the_bee_production" class="btn secondary">Follow on TikTok</a>
+    </section>
+
+  </main>
+
+  <!-- 🍃 التذييل -->
+  <footer>
+    <p>&copy; 2025 Ray - All rights reserved.</p>
+    <p class="quote">“In every wave, a memory. In every breeze, a new beginning.”</p>
+  </footer>
+
+  <!-- ⏩ حركة تلقائية للـ slider -->
+  <script>
+    const slider = document.querySelector('.slider-container');
+    let scrollAmount = 0;
+    setInterval(() => {
+      scrollAmount += 300;
+      if (scrollAmount >= slider.scrollWidth) scrollAmount = 0;
+      slider.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+    }, 4000);
+  </script>
+
+</body>
+</html>
