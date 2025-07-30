@@ -1,0 +1,221 @@
+:root {
+  --main-color: #4bbecf;
+  --hover-color: #3aa3b3;
+  --secondary-color: #f4a261;
+  --accent-color: #ffeaa7;
+  --background-color: #fefefe;
+  --text-color: #333;
+  --header-gradient: linear-gradient(to right, #4bbecf, #a5def1);
+}
+
+/* 🌸 الإعدادات العامة */
+body {
+  font-family: "Comfortaa", "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background: var(--header-gradient);
+  color: white;
+  padding: 40px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tagline {
+  font-size: 1.2em;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+main {
+  margin-left: 180px; /* مساحة لـ sidebar */
+  padding: 40px 20px;
+}
+
+.about {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 20px rgba(0, 150, 150, 0.05);
+}
+
+blockquote {
+  font-style: italic;
+  margin-top: 20px;
+  color: var(--secondary-color);
+}
+
+/* 🎞️ Sneak Peek + slider */
+.media img {
+  width: 60%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.slider {
+  padding: 40px 20px;
+  background-color: var(--accent-color);
+}
+
+.slider h2 {
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.slider-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  justify-content: center;
+}
+
+.slide {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.slide:hover img {
+  transform: scale(1.3);
+  z-index: 2;
+}
+
+.caption {
+  margin-top: 8px;
+  font-size: 0.9em;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+/* 🎈 روابط الموقع */
+.links {
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  margin: 10px;
+  background-color: var(--main-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--hover-color);
+  transform: scale(1.05);
+}
+
+.btn.secondary {
+  background-color: var(--secondary-color);
+}
+
+/* 🍃 تذييل الموقع */
+footer {
+  background-color: var(--accent-color);
+  padding: 20px;
+  font-size: 0.9em;
+  color: var(--text-color);
+  border-top: 2px solid var(--main-color);
+}
+
+footer .quote {
+  font-style: italic;
+  margin-top: 10px;
+  color: #666;
+}
+
+/* 🌈 Sidebar أنيق ومخفي */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -130px;
+  width: 160px;
+  height: 100%;
+  background: linear-gradient(to bottom, #4bbecf, #a5def1);
+  box-shadow: 2px 0 12px rgba(0,0,0,0.1);
+  transition: left 0.4s ease;
+  z-index: 1000;
+  padding: 20px;
+  border-right: 2px solid var(--main-color);
+}
+
+.sidebar:hover {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.sidebar a:hover {
+  transform: scale(1.1);
+  color: var(--secondary-color);
+}
+
+/* 📱 تجاوب الهواتف */
+@media (max-width: 768px) {
+  main {
+    margin-left: 0;
+    padding: 30px 15px;
+  }
+
+  .media img {
+    width: 100%;
+  }
+
+  .btn {
+    width: 80%;
+    display: block;
+    margin: 10px auto;
+  }
+
+  .slider-container {
+    gap: 15px;
+  }
+
+  .slide img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .caption {
+    font-size: 0.8em;
+  }
+
+  .sidebar {
+    display: none; /* تخفيها مؤقتًا على الهاتف */
+  }
+}
